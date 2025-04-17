@@ -1,0 +1,14 @@
+<h1>Edit List</h1>
+
+<form action="/admin/lists/edit/{{list.id}}" method="POST">
+    <div class="mb-3">
+        <label for="name" class="form-label">List Name</label>
+        <input type="text" class="form-control" id="name" name="name" value="{{list.name}}" required>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" name="description" rows="3">{{list.description}}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Update List</button>
+    <a href="/lists/{{list.id}}" class="btn btn-secondary">Cancel</a>
+</form>

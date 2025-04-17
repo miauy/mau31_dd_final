@@ -1,0 +1,22 @@
+<h1>Edit Task</h1>
+
+<form action="/admin/tasks/edit/{{task.id}}" method="POST">
+    <div class="mb-3">
+        <label for="title" class="form-label">Task Title</label>
+        <input type="text" class="form-control" id="title" name="title" value="{{task.title}}" required>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" name="description" rows="3">{{task.description}}</textarea>
+    </div>
+    <div class="mb-3">
+        <label for="due_date" class="form-label">Due Date</label>
+        <input type="date" class="form-control" id="due_date" name="due_date" value="{{task.due_date}}">
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="is_completed" name="is_completed" {{#if task.is_completed}}checked{{/if}}>
+        <label class="form-check-label" for="is_completed">Completed</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Task</button>
+    <a href="/lists/{{list.id}}" class="btn btn-secondary">Cancel</a>
+</form>

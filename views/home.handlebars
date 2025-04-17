@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <h1 class="display-4">Welcome to the Todo App</h1>
+        <p class="lead">Manage your tasks efficiently with our simple todo application.</p>
+        <p>Create multiple lists, add tasks, and stay organized!</p>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-8 mx-auto">
+        <h2 class="mb-4">Recent Lists</h2>
+        {{#if recentLists.length}}
+            <div class="row">
+                {{#each recentLists}}
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">{{this.name}}</h5>
+                                <p class="card-text">{{this.description}}</p>
+                                <a href="/lists/{{this.id}}" class="btn btn-primary">View Tasks</a>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        {{else}}
+            <div class="alert alert-info">
+                No lists found. Create your first list in the <a href="/admin" class="alert-link">Admin section</a>!
+            </div>
+        {{/if}}
+    </div>
+</div>

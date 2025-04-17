@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>{{list.name}}</h1>
+    <a href="/admin/tasks/add/{{list.id}}" class="btn btn-success">Add Task</a>
+</div>
+
+<p>{{list.description}}</p>
+
+<h2>Tasks</h2>
+{{#if tasks.length}}
+    <div class="list-group">
+        {{#each tasks}}
+            <div class="list-group-item {{#if this.is_completed}}list-group-item-success{{/if}}">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5>{{this.title}}</h5>
+                        <p class="mb-1">{{this.description}}</p>
+                        {{#if this.due_date}}
+                            <small>Due: {{this.due_date}}</small>
+                        {{/if}}
+                    </div>
+                    <div>
+                        <a href="/admin/tasks/edit/{{this.id}}" class="btn btn-sm btn-warning">Edit</a>
+                        <form action="/admin/tasks/delete/{{this.id}}" method="POST" class="d-inline">
+                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+{{else}}
+    <div class="alert alert-info">No tasks found for this list. Add your first task!</div>
+{{/if}}

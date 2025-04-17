@@ -1,0 +1,27 @@
+{
+  "name": "mau31_dd_final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miauy/mau31_dd_final.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miauy/mau31_dd_final/issues"
+  },
+  "homepage": "https://github.com/miauy/mau31_dd_final#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.5",
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.2",
+    "sqlite3": "^5.1.7"
+  }
+}
