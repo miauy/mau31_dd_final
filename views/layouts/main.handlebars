@@ -1,43 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        html, body {
+        html,
+        body {
             height: 100%;
             margin: 0;
         }
+
         body {
             display: flex;
             flex-direction: column;
         }
+
         .content {
             flex: 1 0 auto;
-            padding-bottom: 60px; /* Space for footer */
+            padding-bottom: 60px;
         }
-        footer {
-            flex-shrink: 0;
-            background-color: #f8f9fa;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
+
         .navbar {
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
+        .btn-edit-custom {
+            background-color: #f5e66d;
+            /* Bootstrap's yellow */
+            color: #212529;
+            border: none;
+        }
+
+        .btn-edit-custom:hover {
+            background-color: #fbed86;
+            /* Darker yellow */
+        }
+
+        .btn-delete-custom {
+            background-color: #f15f63;
+            color: white;
+            border: none;
+        }
+
+        .btn-delete-custom:hover {
+            background-color: #ec7e81;
+            /* Darker red */
+        }
+
+        .btn-add-task-custom {
+            background-color: #578e5d;
+            color: white;
+            border: none;
+        }
+        .btn-add-task-custom:hover {
+            background-color: #749e79;
+            color: white;
+            border: none;
+        }
+
+        .btn-viewlists-custom {
+            background-color: #3271b3;
+            color: white;
+            border: none;
+        }
+        .btn-viewlists-custom:hover {
+            background-color: #4288d3;
+            color: white;
+            border: none;
+        }
+
     </style>
 </head>
+
 <body>
     {{> navbar}}
-    
+
     <main class="content container mt-4">
         {{{body}}}
     </main>
-    
-    {{> footer}}
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

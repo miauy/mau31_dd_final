@@ -6,7 +6,7 @@
     </div>
 </div>
 
-<div class="row mt-5">
+<div class="row mt-4">
     <div class="col-md-8 mx-auto">
         <h2 class="mb-4">Recent Lists</h2>
         {{#if recentLists.length}}
@@ -17,7 +17,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{this.name}}</h5>
                                 <p class="card-text">{{this.description}}</p>
-                                <a href="/lists/{{this.id}}" class="btn btn-primary">View Tasks</a>
+                                <a href="/lists/{{this.id}}" class="btn btn-viewlists-custom">View Tasks</a>
                             </div>
                         </div>
                     </div>
@@ -25,7 +25,7 @@
             </div>
         {{else}}
             <div class="alert alert-info">
-                No lists found. Create your first list in the <a href="/admin" class="alert-link">Admin section</a>!
+                No lists found. Create your first list in the <a href="/lists" class="alert-link">List section</a>!
             </div>
         {{/if}}
     </div>

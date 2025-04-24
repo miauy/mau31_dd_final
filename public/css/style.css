@@ -15,3 +15,7 @@ body {
     text-decoration: line-through;
     color: #6c757d;
 }
+
+.navbar-purple-800 {
+    background-color: #5e35b1 !important; /* This is purple-800 */
+}
